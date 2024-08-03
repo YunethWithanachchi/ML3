@@ -12,6 +12,6 @@ phases:
     commands:
       - docker push 851725544786.dkr.ecr.us-east-1.amazonaws.com/ai:latest
       - echo Writing image definitions file...
-      - printf '[{"name":"mywebsite","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions.json   
+      - printf '[{"name":"ai","imageUri":"%s"}]' 851725544786.dkr.ecr.us-east-1.amazonaws.com/ai > imagedefinitions.json   
 artifacts:
   files: imagedefinitions.json
