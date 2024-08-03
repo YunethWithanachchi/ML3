@@ -11,7 +11,7 @@ phases:
   post_build:
     commands:
       - docker push 851725544786.dkr.ecr.us-east-1.amazonaws.com/ai:latest
-#       - echo Writing image definitions file...
-#       - printf '[{"name":"mywebsite","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions.json   
-# artifacts:
-#   files: imagedefinitions.json
+      - echo Writing image definitions file...
+      - printf '[{"name":"mywebsite","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions.json   
+artifacts:
+  files: imagedefinitions.json
